@@ -22,7 +22,8 @@ public class CharacterTarget : MonoBehaviour
 		{
 			if (hit.transform.GetComponent<InteractionObject>())
 			{
-				if (Input.GetKeyDown(KeyCode.E))
+				Debug.Log("HIT");
+				if (Input.GetKey(KeyCode.E))
 				{
 					InteractionObject interact = hit.transform.GetComponent<InteractionObject>();
 					interact._interactionEvent.Invoke();

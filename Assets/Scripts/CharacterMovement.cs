@@ -36,6 +36,7 @@ public class CharacterMovement : MonoBehaviour
     [Header("Submarine tracking")]
     [SerializeField] private Transform submarineTransform;
     private Vector3 lastSubPos;
+    private Quaternion lastSubRot;
 
     private void Start()
     {
@@ -46,6 +47,7 @@ public class CharacterMovement : MonoBehaviour
         Cursor.visible = false;
 
         lastSubPos = submarineTransform.position;
+        lastSubRot = submarineTransform.rotation;
     }
 
     private void Update()
@@ -69,11 +71,13 @@ public class CharacterMovement : MonoBehaviour
     {
         float currentSpeed = isCrouching ? crouchSpeed : Input.GetKey(KeyCode.LeftShift) ? sprintSpeed : moveSpeed;
 
-        float horizontal = Input.GetAxis("Horizontal") * currentSpeed;
-        float vertical = Input.GetAxis("Vertical") * currentSpeed;
+        float horizontal = Input.GetAxis("Horizontal")/* * currentSpeed*/;
+        float vertical = Input.GetAxis("Vertical")/* * currentSpeed*/;
 
-        Vector3 moveDirection = new Vector3(horizontal, 0.0f, vertical);
-        moveDirection = transform.rotation * moveDirection;
+        Vector3 moveDirection = (transform.right * horizontal + transform.forward * vertical).normalized * currentSpeed;
+
+        //Vector3 moveDirection = new Vector3(horizontal, 0.0f, vertical);
+        //moveDirection = transform.rotation * moveDirection;
 
         HandleJump();
 
@@ -81,8 +85,6 @@ public class CharacterMovement : MonoBehaviour
         velocity.z = moveDirection.z;
 
         characterController.Move(velocity * Time.deltaTime);
-
-        lastSubPos = submarineTransform.position;
     }
 
     private void HandleMouseLook()
@@ -123,9 +125,37 @@ public class CharacterMovement : MonoBehaviour
 
     private void HandleSubmarineTracking()
 	{
-        Vector3 subDelta = submarineTransform.position - lastSubPos;
+        Vector3 subDeltaPos = submarineTransform.position - lastSubPos;
+        characterController.Move(subDeltaPos);
 
-        characterController.Move(subDelta);
+        Quaternion currentSubRot = submarineTransform.rotation;
+        Quaternion deltaRot = currentSubRot * Quaternion.Inverse(lastSubRot);
+
+        float deltaYaw = deltaRot.eulerAngles.y;
+        if (deltaYaw > 180) deltaYaw -= 360;
+
+        if(Mathf.Abs(deltaYaw) > .001f)
+		{
+            Vector3 pivot = submarineTransform.position;
+            Vector3 offsetFromPivot = transform.position - pivot;
+
+            Quaternion yawRotation = Quaternion.Euler(0f, deltaYaw, 0f);
+            Vector3 rotatedOffset = yawRotation * offsetFromPivot;
+
+            Vector3 newPlayerPos = pivot + rotatedOffset;
+            characterController.enabled = false;
+            transform.position = newPlayerPos;
+            characterController.enabled = true;
+
+            transform.rotation = yawRotation * transform.rotation;
+            yaw += deltaYaw;
+		}
+
+        //transform.RotateAround(submarineTransform.position, Vector3.up, deltaYaw);
+        //yaw += deltaYaw;
+
+        lastSubPos = submarineTransform.position;
+        lastSubRot = currentSubRot;
     }
 
     private IEnumerator CrouchStand()
