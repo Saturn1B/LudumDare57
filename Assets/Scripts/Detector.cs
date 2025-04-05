@@ -4,17 +4,18 @@ using UnityEngine;
 
 public class Detector : MonoBehaviour
 {
-	public int objectDetected;
+	//public int objectDetected;
+	public HashSet<Collider> colliderDetected = new HashSet<Collider>();
 
 	private void OnTriggerEnter(Collider other)
 	{
-		if(!other.CompareTag("Submarine"))
-			objectDetected++;
+		if (!other.CompareTag("Submarine"))
+			colliderDetected.Add(other);
 	}
 
 	private void OnTriggerExit(Collider other)
 	{
 		if (!other.CompareTag("Submarine"))
-			objectDetected--;
+			colliderDetected.Remove(other);
 	}
 }
