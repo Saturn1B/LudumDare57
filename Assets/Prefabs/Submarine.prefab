@@ -150,7 +150,7 @@ GameObject:
   - component: {fileID: 8101008901609407764}
   - component: {fileID: 5566590179434178032}
   - component: {fileID: 8910144569112512322}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Front
   m_TagString: Submarine
   m_Icon: {fileID: 0}
@@ -397,7 +397,7 @@ GameObject:
   - component: {fileID: 2236404466746819619}
   - component: {fileID: 5393726071053530913}
   - component: {fileID: 379571656756934014}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Up
   m_TagString: Submarine
   m_Icon: {fileID: 0}
@@ -625,7 +625,7 @@ GameObject:
   - component: {fileID: 511537467446153604}
   - component: {fileID: 6702270239667863204}
   - component: {fileID: 1550162459319323086}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Right
   m_TagString: Submarine
   m_Icon: {fileID: 0}
@@ -998,6 +998,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerReach: 4
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &3653232099068429785
 GameObject:
   m_ObjectHideFlags: 0
@@ -1201,7 +1204,7 @@ GameObject:
   - component: {fileID: 5174439731988248965}
   - component: {fileID: 6121374893803879978}
   - component: {fileID: 3436926629835239789}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Down
   m_TagString: Submarine
   m_Icon: {fileID: 0}
@@ -6536,7 +6539,7 @@ GameObject:
   - component: {fileID: 5961639196656180700}
   - component: {fileID: 8858372648421573491}
   - component: {fileID: 8680947156610042847}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6642,7 +6645,7 @@ GameObject:
   - component: {fileID: 862339040676217263}
   - component: {fileID: 9070130178231500501}
   - component: {fileID: 6552401492897023226}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Back
   m_TagString: Submarine
   m_Icon: {fileID: 0}
@@ -6804,6 +6807,8 @@ GameObject:
   m_Component:
   - component: {fileID: 300833961242968626}
   - component: {fileID: 7754283818686700495}
+  - component: {fileID: 3894123799925174207}
+  - component: {fileID: 2680491895439461488}
   m_Layer: 0
   m_Name: Submarine
   m_TagString: Submarine
@@ -6848,6 +6853,54 @@ MonoBehaviour:
   yawRotationSpeed: 20
   pitchRotationSpeed: 20
   pitchLimitAngle: 45
+--- !u!54 &3894123799925174207
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7199990606702552244}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 64
+  m_CollisionDetection: 0
+--- !u!65 &2680491895439461488
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7199990606702552244}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4, y: 3, z: 8}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7710485352751512012
 GameObject:
   m_ObjectHideFlags: 0
@@ -7106,7 +7159,7 @@ GameObject:
   - component: {fileID: 4886766609154755841}
   - component: {fileID: 7418570790945428770}
   - component: {fileID: 8556409798739243635}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Left
   m_TagString: Submarine
   m_Icon: {fileID: 0}

@@ -6,28 +6,32 @@ public class CharacterTarget : MonoBehaviour
 {
     private Transform playerCamera;
     private CharacterMovement characterMovement;
+	private SubmarineController submarineController;
     [SerializeField] private int playerReach;
+    [SerializeField] private LayerMask layerMask;
 
 	private void Start()
 	{
 		playerCamera = GetComponentInChildren<Camera>().transform;
 		characterMovement = GetComponent<CharacterMovement>();
+		submarineController = GetComponentInParent<SubmarineController>();
 	}
 
 	private void Update()
 	{
 		RaycastHit hit;
 
-		if (Physics.Raycast(playerCamera.position, playerCamera.forward, out hit, playerReach))
+		if (Physics.Raycast(playerCamera.position, playerCamera.forward, out hit, playerReach, layerMask))
 		{
-			if (hit.transform.GetComponent<InteractionObject>())
+			Debug.Log("Hit: " + hit.collider.name + " on layer " + hit.collider.gameObject.layer);
+			InteractionObject interact = hit.collider.transform.GetComponent<InteractionObject>();
+			if (Input.GetKey(KeyCode.E))
 			{
-				Debug.Log("HIT");
-				if (Input.GetKey(KeyCode.E))
-				{
-					InteractionObject interact = hit.transform.GetComponent<InteractionObject>();
-					interact._interactionEvent.Invoke();
-				}
+				interact._interactionEvent.Invoke();
+			}
+			else
+			{
+				submarineController.StopAllMovement();
 			}
 		}
 	}

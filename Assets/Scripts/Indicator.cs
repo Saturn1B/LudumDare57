@@ -66,7 +66,6 @@ public class Indicator : MonoBehaviour
 		if(Physics.BoxCast(origin, halfExtents, transform.TransformDirection(direction), out RaycastHit hit, subTransform.rotation, maxDistance))
 		{
 			float t = 1f - (hit.distance / maxDistance);
-			Debug.Log(hit.distance);
 			blinkSpeed = baseBlinkSpeed / t;
 			blinkSpeed = Mathf.Clamp(blinkSpeed, 0.01f, 5);
 			if (!isBlinking)
