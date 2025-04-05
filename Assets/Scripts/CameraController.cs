@@ -41,10 +41,14 @@ public class CameraController : MonoBehaviour
 
         pitch = ClampAngle(pitch, minPitch, maxPitch);
 
-        transform.eulerAngles = new Vector3(0.0f, yaw, 0.0f);
-        playerCamera.transform.localEulerAngles = new Vector3(pitch, 0.0f, 0.0f);
+        Quaternion subRotation = submarineTransform.rotation;
+        Quaternion yawRotation = Quaternion.Euler(.0f, yaw, .0f);
+        transform.rotation = subRotation * yawRotation;
 
-        lastSubRot = submarineTransform.rotation;
+        playerCamera.transform.localRotation = Quaternion.Euler(pitch, .0f, .0f);
+
+        //transform.eulerAngles = new Vector3(0.0f, yaw, 0.0f);
+        //playerCamera.transform.localEulerAngles = new Vector3(pitch, 0.0f, 0.0f);
     }
 
     private float ClampAngle(float angle, float min, float max)

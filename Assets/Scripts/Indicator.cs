@@ -7,6 +7,7 @@ public class Indicator : MonoBehaviour
 {
 	[SerializeField] private Transform subTransform;
 	[SerializeField] private Vector3 direction;
+	[SerializeField] private float maxDistance;
 	[SerializeField] private Image indicatorLight;
 	[SerializeField] private Color colorOff, colorOn;
 	[SerializeField] private float baseBlinkSpeed;
@@ -56,7 +57,7 @@ public class Indicator : MonoBehaviour
 		Vector3 origin = subTransform.position;
 
 		Vector3 halfExtents = new Vector3(4, 2, 8) / 2;
-		float maxDistance = 10;
+		//float maxDistance = 10;
 
 		//Quaternion orientation = Quaternion.LookRotation(transform.TransformDirection(direction), transform.up);
 
