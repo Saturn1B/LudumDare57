@@ -7,6 +7,7 @@ public class SubmarineController : MonoBehaviour
 	[SerializeField] private float movementSpeed;
 	[SerializeField] private float yawRotationSpeed;
 	[SerializeField] private float pitchRotationSpeed;
+	[SerializeField] private float pitchLimitAngle;
 
 	public void Move(bool isBackward)
 	{
@@ -19,16 +20,24 @@ public class SubmarineController : MonoBehaviour
 	public void RotateYaw(bool isBackward)
 	{
 		if (!isBackward)
-			transform.Rotate(Vector3.up * yawRotationSpeed * Time.deltaTime);
+			transform.eulerAngles += Vector3.up * yawRotationSpeed * Time.deltaTime;
 		else
-			transform.Rotate(Vector3.down * yawRotationSpeed * Time.deltaTime);
+			transform.eulerAngles -= Vector3.up * yawRotationSpeed * Time.deltaTime;
 	}
 
 	public void RotatePitch(bool isBackward)
 	{
+		float targetXRotation = transform.eulerAngles.x;
+
 		if (!isBackward)
-			transform.Rotate(Vector3.right * pitchRotationSpeed * Time.deltaTime);
-		else
-			transform.Rotate(Vector3.left * pitchRotationSpeed * Time.deltaTime);
+			targetXRotation -= pitchRotationSpeed * Time.deltaTime;
+		else if (isBackward)
+			targetXRotation += pitchRotationSpeed * Time.deltaTime;
+
+		if (targetXRotation > 180)
+			targetXRotation -= 360;
+
+		targetXRotation = Mathf.Clamp(targetXRotation, -pitchLimitAngle, pitchLimitAngle);
+		transform.rotation = Quaternion.Euler(targetXRotation, transform.eulerAngles.y, transform.eulerAngles.z);
 	}
 }

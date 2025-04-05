@@ -151,8 +151,8 @@ public class CharacterMovement : MonoBehaviour
             yaw += deltaYaw;
 		}
 
-        //transform.RotateAround(submarineTransform.position, Vector3.up, deltaYaw);
-        //yaw += deltaYaw;
+        Vector3 submarineUp = submarineTransform.up;  // Normal vector of the submarine's surface
+        RaycastHit hit;
 
         lastSubPos = submarineTransform.position;
         lastSubRot = currentSubRot;
