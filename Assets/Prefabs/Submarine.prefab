@@ -8914,7 +8914,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   subTransform: {fileID: 300833961242968626}
   direction: {x: 1, y: 0, z: 0}
-  maxDistance: 50
+  maxDistance: 150
   matOff: {fileID: 2100000, guid: 6f811e3d9c64c634594a0926253da5ff, type: 2}
   matOn: {fileID: 2100000, guid: e860f13d2da53a640a9b40c559b74d74, type: 2}
   indicatorLight: {fileID: 383270250240097685}
@@ -8957,7 +8957,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   subTransform: {fileID: 300833961242968626}
   direction: {x: 0, y: -1, z: 0}
-  maxDistance: 5
+  maxDistance: 15
   matOff: {fileID: 2100000, guid: 6f811e3d9c64c634594a0926253da5ff, type: 2}
   matOn: {fileID: 2100000, guid: 8cc22a94ff54da84fbf33a82251db598, type: 2}
   indicatorLight: {fileID: 5769830449991380599}
@@ -9053,7 +9053,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   subTransform: {fileID: 300833961242968626}
   direction: {x: 1, y: 0, z: 0}
-  maxDistance: 5
+  maxDistance: 50
   matOff: {fileID: 2100000, guid: 6f811e3d9c64c634594a0926253da5ff, type: 2}
   matOn: {fileID: 2100000, guid: 8cc22a94ff54da84fbf33a82251db598, type: 2}
   indicatorLight: {fileID: 3730554712339198657}
@@ -9144,7 +9144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   subTransform: {fileID: 300833961242968626}
   direction: {x: 0, y: 0, z: -1}
-  maxDistance: 50
+  maxDistance: 150
   matOff: {fileID: 2100000, guid: 6f811e3d9c64c634594a0926253da5ff, type: 2}
   matOn: {fileID: 2100000, guid: e860f13d2da53a640a9b40c559b74d74, type: 2}
   indicatorLight: {fileID: 9136644986078779869}
@@ -9172,7 +9172,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   subTransform: {fileID: 300833961242968626}
   direction: {x: 0, y: 0, z: 1}
-  maxDistance: 50
+  maxDistance: 150
   matOff: {fileID: 2100000, guid: 6f811e3d9c64c634594a0926253da5ff, type: 2}
   matOn: {fileID: 2100000, guid: e860f13d2da53a640a9b40c559b74d74, type: 2}
   indicatorLight: {fileID: 9054464542656901265}
@@ -9321,7 +9321,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   subTransform: {fileID: 300833961242968626}
   direction: {x: -1, y: 0, z: 1}
-  maxDistance: 5
+  maxDistance: 50
   matOff: {fileID: 2100000, guid: 6f811e3d9c64c634594a0926253da5ff, type: 2}
   matOn: {fileID: 2100000, guid: 8cc22a94ff54da84fbf33a82251db598, type: 2}
   indicatorLight: {fileID: 835407072454221482}
@@ -9354,7 +9354,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   subTransform: {fileID: 300833961242968626}
   direction: {x: 1, y: 0, z: 1}
-  maxDistance: 50
+  maxDistance: 150
   matOff: {fileID: 2100000, guid: 6f811e3d9c64c634594a0926253da5ff, type: 2}
   matOn: {fileID: 2100000, guid: e860f13d2da53a640a9b40c559b74d74, type: 2}
   indicatorLight: {fileID: 8769489386102836606}
@@ -9440,7 +9440,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   subTransform: {fileID: 300833961242968626}
   direction: {x: 0, y: 0, z: -1}
-  maxDistance: 5
+  maxDistance: 50
   matOff: {fileID: 2100000, guid: 6f811e3d9c64c634594a0926253da5ff, type: 2}
   matOn: {fileID: 2100000, guid: 8cc22a94ff54da84fbf33a82251db598, type: 2}
   indicatorLight: {fileID: 8690253664023888097}
@@ -9468,7 +9468,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   subTransform: {fileID: 300833961242968626}
   direction: {x: -1, y: 0, z: 1}
-  maxDistance: 50
+  maxDistance: 150
   matOff: {fileID: 2100000, guid: 6f811e3d9c64c634594a0926253da5ff, type: 2}
   matOn: {fileID: 2100000, guid: e860f13d2da53a640a9b40c559b74d74, type: 2}
   indicatorLight: {fileID: 1188252705432339640}
@@ -9549,7 +9549,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   subTransform: {fileID: 300833961242968626}
   direction: {x: -1, y: 0, z: 0}
-  maxDistance: 50
+  maxDistance: 150
   matOff: {fileID: 2100000, guid: 6f811e3d9c64c634594a0926253da5ff, type: 2}
   matOn: {fileID: 2100000, guid: e860f13d2da53a640a9b40c559b74d74, type: 2}
   indicatorLight: {fileID: 2355815113105832312}
@@ -9592,7 +9592,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   subTransform: {fileID: 300833961242968626}
   direction: {x: 0, y: 0, z: 1}
-  maxDistance: 5
+  maxDistance: 50
   matOff: {fileID: 2100000, guid: 6f811e3d9c64c634594a0926253da5ff, type: 2}
   matOn: {fileID: 2100000, guid: 8cc22a94ff54da84fbf33a82251db598, type: 2}
   indicatorLight: {fileID: 1216594751834714441}
@@ -9620,7 +9620,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   subTransform: {fileID: 300833961242968626}
   direction: {x: -1, y: 0, z: 0}
-  maxDistance: 5
+  maxDistance: 50
   matOff: {fileID: 2100000, guid: 6f811e3d9c64c634594a0926253da5ff, type: 2}
   matOn: {fileID: 2100000, guid: 8cc22a94ff54da84fbf33a82251db598, type: 2}
   indicatorLight: {fileID: 501992729952927703}
@@ -9663,7 +9663,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   subTransform: {fileID: 300833961242968626}
   direction: {x: 1, y: 0, z: 1}
-  maxDistance: 5
+  maxDistance: 50
   matOff: {fileID: 2100000, guid: 6f811e3d9c64c634594a0926253da5ff, type: 2}
   matOn: {fileID: 2100000, guid: 8cc22a94ff54da84fbf33a82251db598, type: 2}
   indicatorLight: {fileID: 4126026786833113559}
