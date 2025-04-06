@@ -11,6 +11,7 @@ public class SubLife : MonoBehaviour
 	[SerializeField] private Transform warningBlinker;
 	[SerializeField] private Material blinkerOn, blinkerOff;
 	[SerializeField] private LayerMask collisionLayer;
+	[SerializeField] private GameUI gameUI;
 	private float blinkSpeed;
     private int currentLife;
 
@@ -21,12 +22,13 @@ public class SubLife : MonoBehaviour
 
 	public void TakeDamage(int amount)
 	{
+		if (currentLife <= 0) return;
+
 		currentLife -= amount;
 		if(currentLife <= 0)
 		{
 			currentLife = 0;
-			//TO DO GameOver
-			//return;
+			gameUI.GameOver();
 		}
 		else if(currentLife == 2)
 		{

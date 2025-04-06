@@ -9,6 +9,7 @@ public class CollectManager : MonoBehaviour
 	private int collected = 0;
 	[SerializeField] private TMP_Text counterText;
 	[SerializeField] private Indicator indicator;
+	[SerializeField] private GameUI gameUI;
 
 	private void Awake()
 	{
@@ -26,6 +27,11 @@ public class CollectManager : MonoBehaviour
 			collected++;
 			counterText.text = $"{collected} / {totalCollectible}";
 			Destroy(other.gameObject);
+
+			if(collected >= totalCollectible)
+			{
+				gameUI.Win();
+			}
 		}
 	}
 }
