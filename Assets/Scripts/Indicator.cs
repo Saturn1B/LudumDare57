@@ -60,7 +60,7 @@ public class Indicator : MonoBehaviour
 	{
 		Vector3 origin = subTransform.position;
 
-		Vector3 halfExtents = (new Vector3(5, 5, 7) * detectionScale) / 2;
+		Vector3 halfExtents = (new Vector3(6, 6, 8) * detectionScale) / 2;
 		//float maxDistance = 10;
 
 		//Quaternion orientation = Quaternion.LookRotation(transform.TransformDirection(direction), transform.up);

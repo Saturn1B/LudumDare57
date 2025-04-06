@@ -12,6 +12,9 @@ public class SubLife : MonoBehaviour
 	[SerializeField] private Material blinkerOn, blinkerOff;
 	[SerializeField] private LayerMask collisionLayer;
 	[SerializeField] private GameUI gameUI;
+	[SerializeField] private AudioSource collisionNoise;
+	[SerializeField] private AudioSource warningNoise;
+	[SerializeField] private AudioSource explosionNoise;
 	private float blinkSpeed;
     private int currentLife;
 
@@ -28,6 +31,7 @@ public class SubLife : MonoBehaviour
 		if(currentLife <= 0)
 		{
 			currentLife = 0;
+			explosionNoise.Play();
 			gameUI.GameOver();
 		}
 		else if(currentLife == 2)
@@ -48,7 +52,11 @@ public class SubLife : MonoBehaviour
 	private void OnCollisionEnter(Collision collision)
 	{
 		if(collision.gameObject.layer == LayerMask.NameToLayer("Obstacle"))
+		{
 			TakeDamage(1);
+			collisionNoise.pitch = Random.Range(0.7f, 1.1f);
+			collisionNoise.Play();
+		}
 	}
 
 	private void UpdateLifeBar()
@@ -67,6 +75,8 @@ public class SubLife : MonoBehaviour
 
 	private IEnumerator Blinker()
 	{
+		warningNoise.Stop();
+		warningNoise.Play();
 		warningBlinker.GetComponent<MeshRenderer>().material = blinkerOn;
 
 		yield return new WaitForSeconds(blinkSpeed);

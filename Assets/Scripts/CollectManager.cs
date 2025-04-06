@@ -10,10 +10,11 @@ public class CollectManager : MonoBehaviour
 	[SerializeField] private TMP_Text counterText;
 	[SerializeField] private Indicator indicator;
 	[SerializeField] private GameUI gameUI;
+	[SerializeField] private AudioSource collectingNoise;
 
 	private void Awake()
 	{
-		GetComponent<BoxCollider>().size = new Vector3(5, 5, 7) * indicator.detectionScale;
+		GetComponent<BoxCollider>().size = new Vector3(6, 6, 8) * indicator.detectionScale;
 
 		GameObject[] collectibles = GameObject.FindGameObjectsWithTag("Collectible");
 		totalCollectible = collectibles.Length;
@@ -24,6 +25,8 @@ public class CollectManager : MonoBehaviour
 	{
 		if (other.CompareTag("Collectible"))
 		{
+			collectingNoise.pitch = Random.Range(0.85f, 1.1f);
+			collectingNoise.Play();
 			collected++;
 			counterText.text = $"{collected} / {totalCollectible}";
 			Destroy(other.gameObject);

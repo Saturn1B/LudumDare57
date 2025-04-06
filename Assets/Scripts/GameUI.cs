@@ -6,11 +6,19 @@ using UnityEngine.SceneManagement;
 public class GameUI : MonoBehaviour
 {
 	[SerializeField] private GameObject winPanel, loosePanel;
+	[SerializeField] private CharacterTarget characterTarget;
+	bool win, loose;
 
 	public void Win()
 	{
+		if (loose) return;
+
+		win = true;
+
 		Cursor.lockState = CursorLockMode.None;
 		Cursor.visible = true;
+
+		StopEngineNoise();
 
 		winPanel.SetActive(true);
 		Time.timeScale = 0;
@@ -18,8 +26,14 @@ public class GameUI : MonoBehaviour
 
 	public void GameOver()
 	{
+		if (win) return;
+
+		loose = true;
+
 		Cursor.lockState = CursorLockMode.None;
 		Cursor.visible = true;
+
+		StopEngineNoise();
 
 		loosePanel.SetActive(true);
 		Time.timeScale = 0;
@@ -35,5 +49,10 @@ public class GameUI : MonoBehaviour
 	{
 		Time.timeScale = 1;
 		SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
+	}
+
+	private void StopEngineNoise()
+	{
+		characterTarget.submarineEngineNoise.pitch = .3f;
 	}
 }

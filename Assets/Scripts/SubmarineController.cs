@@ -32,8 +32,7 @@ public class SubmarineController : MonoBehaviour
 		Vector3 direction = isBackward ? -transform.forward : transform.forward;
 		rb.MovePosition(rb.position + direction * movementSpeed * Time.deltaTime);
 
-		rb.velocity = Vector3.zero;
-		rb.angularVelocity = Vector3.zero;
+
 	}
 
 	public void RotateYaw(bool isBackward)
