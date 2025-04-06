@@ -11,7 +11,7 @@ public class Indicator : MonoBehaviour
 	[SerializeField] private Image indicatorLight;
 	[SerializeField] private Color colorOff, colorOn;
 	[SerializeField] private float baseBlinkSpeed;
-	[SerializeField] private float detectionScale = 1f;
+	public float detectionScale = 1f;
 	[SerializeField] private LayerMask layerMask;
 	private float blinkSpeed;
 
