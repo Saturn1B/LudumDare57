@@ -23,7 +23,6 @@ public class CharacterTarget : MonoBehaviour
 
 		if (Physics.Raycast(playerCamera.position, playerCamera.forward, out hit, playerReach, layerMask))
 		{
-			Debug.Log("Hit: " + hit.collider.name + " on layer " + hit.collider.gameObject.layer);
 			InteractionObject interact = hit.collider.transform.GetComponent<InteractionObject>();
 			if (Input.GetKey(KeyCode.E))
 			{

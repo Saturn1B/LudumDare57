@@ -14,9 +14,16 @@ public class MonsterAI : MonoBehaviour
     [SerializeField] private Vector3 zoneCenter;
     [SerializeField] private Vector3 zoneSize;
 
-    private Vector3 wanderDirection;
+	[SerializeField] private float attackDistance;
+	[SerializeField] private float attackCooldown;
+	[SerializeField] private float escapeDistance;
+
+	private float cooldownTimer = 0f;
+	private bool hasAttacked = false;
+
+	private Vector3 wanderDirection;
     private Transform player;
-    private enum State { Wandering, Chasing}
+    private enum State { Wandering, Chasing, Attacking, Cooldown}
     private State currentState = State.Wandering;
 
 	private Vector3 currentDirection;
@@ -26,7 +33,7 @@ public class MonsterAI : MonoBehaviour
 		currentDirection = transform.forward;
 
 		wanderDirection = Random.onUnitSphere;
-		player = GameObject.FindGameObjectWithTag("Submarine").transform;
+		player = GameObject.FindGameObjectWithTag("SubmarineMain").transform;
 	}
 
 	private void Update()
@@ -41,7 +48,20 @@ public class MonsterAI : MonoBehaviour
 				break;
 			case State.Chasing:
 				Chase();
+				if (Vector3.Distance(transform.position, player.position) < attackDistance)
+				{
+					currentState = State.Attacking;
+					hasAttacked = false;
+				}
 				LosePlayerCheck();
+				break;
+			case State.Attacking:
+				Attack();
+				break;
+			case State.Cooldown:
+				cooldownTimer -= Time.deltaTime;
+				if (cooldownTimer <= 0f)
+					currentState = State.Wandering;
 				break;
 		}
 
@@ -58,7 +78,26 @@ public class MonsterAI : MonoBehaviour
 	void Chase()
 	{
 		if (player != null)
-			RotateTowards(player.position);
+			RotateTowards(player.position + player.forward * 2);
+	}
+
+	void Attack()
+	{
+		if (!hasAttacked)
+		{
+			player.GetComponent<SubLife>().TakeDamage(2);
+			hasAttacked = true;
+		}
+
+		Vector3 escapeDir = (transform.position - player.position).normalized;
+
+		RotateTowards(transform.position + escapeDir);
+
+		if(Vector3.Distance(transform.position, player.position) >= escapeDistance)
+		{
+			currentState = State.Cooldown;
+			cooldownTimer = attackCooldown;
+		}
 	}
 
 	void DetectPlayer()
@@ -129,7 +168,21 @@ public class MonsterAI : MonoBehaviour
 
 	void MoveForward()
 	{
-		transform.position += transform.forward * speed * Time.deltaTime;
+		switch (currentState)
+		{
+			case State.Wandering:
+				transform.position += transform.forward * speed * Time.deltaTime;
+				break;
+			case State.Chasing:
+				transform.position += transform.forward * (speed * 1.5f) * Time.deltaTime;
+				break;
+			case State.Attacking:
+				transform.position += transform.forward * (speed * 2) * Time.deltaTime;
+				break;
+			case State.Cooldown:
+				transform.position += transform.forward * speed * Time.deltaTime;
+				break;
+		}
 	}
 
 	void StayInZone()
@@ -189,11 +242,15 @@ public class MonsterAI : MonoBehaviour
 		Gizmos.color = Color.green;
 		Gizmos.DrawWireSphere(transform.position, detectionRadius);
 
+		// Optional: show attack radius
+		Gizmos.color = Color.blue;
+		Gizmos.DrawWireSphere(transform.position, attackDistance);
+
 		// Optional: show line to player if chasing
 		if (player != null && currentState == State.Chasing)
 		{
 			Gizmos.color = Color.yellow;
-			Gizmos.DrawLine(transform.position, player.position);
+			Gizmos.DrawLine(transform.position, player.position + player.forward * 2);
 		}
 	}
 #endif

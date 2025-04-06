@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Submarine
   - Collectible
+  - SubmarineMain
   layers:
   - Default
   - TransparentFX

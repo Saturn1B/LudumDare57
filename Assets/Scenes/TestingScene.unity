@@ -979,8 +979,14 @@ MonoBehaviour:
   obstacleMask:
     serializedVersion: 2
     m_Bits: 128
-  zoneCenter: {x: 40, y: 0, z: 0}
-  zoneSize: {x: 30, y: 30, z: 30}
+  zoneCenter: {x: 20, y: 0, z: 0}
+  zoneSize: {x: 50, y: 30, z: 50}
+  attackDistance: 5
+  attackCooldown: 4
+  escapeDistance: 35
+  attackAngleThreshold: 45
+  attackOffsetDistance: 8
+  attackPrepDistance: 2
 --- !u!1 &1694994044
 GameObject:
   m_ObjectHideFlags: 0
