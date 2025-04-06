@@ -17,7 +17,7 @@ public class MenuManager : MonoBehaviour
     public void StartGame()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene("TestingScene", LoadSceneMode.Single);
+        SceneManager.LoadScene("Art_scene 2", LoadSceneMode.Single);
     }
 
     public void Credits()

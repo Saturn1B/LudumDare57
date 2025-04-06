@@ -18,6 +18,8 @@ public class MonsterAI : MonoBehaviour
 	[SerializeField] private float attackCooldown;
 	[SerializeField] private float escapeDistance;
 
+	[SerializeField] private AudioSource sharkBiteNoise;
+
 	private float cooldownTimer = 0f;
 	private bool hasAttacked = false;
 
@@ -85,6 +87,7 @@ public class MonsterAI : MonoBehaviour
 	{
 		if (!hasAttacked)
 		{
+			sharkBiteNoise.Play();
 			player.GetComponent<SubLife>().TakeDamage(2);
 			hasAttacked = true;
 		}

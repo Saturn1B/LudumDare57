@@ -14,7 +14,7 @@ public class CollectManager : MonoBehaviour
 
 	private void Awake()
 	{
-		GetComponent<BoxCollider>().size = new Vector3(6, 6, 8) * indicator.detectionScale;
+		GetComponent<BoxCollider>().size = new Vector3(6, 6, 8);
 
 		GameObject[] collectibles = GameObject.FindGameObjectsWithTag("Collectible");
 		totalCollectible = collectibles.Length;

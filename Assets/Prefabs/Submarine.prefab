@@ -8914,12 +8914,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   subTransform: {fileID: 300833961242968626}
   direction: {x: 1, y: 0, z: 0}
-  maxDistance: 150
+  maxDistance: 75
   matOff: {fileID: 2100000, guid: 6f811e3d9c64c634594a0926253da5ff, type: 2}
   matOn: {fileID: 2100000, guid: e860f13d2da53a640a9b40c559b74d74, type: 2}
   indicatorLight: {fileID: 383270250240097685}
   baseBlinkSpeed: 1
-  detectionScale: 1
+  detectionScale: 4
   layerMask:
     serializedVersion: 2
     m_Bits: 512
@@ -8965,7 +8965,7 @@ MonoBehaviour:
   detectionScale: 1
   layerMask:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 1152
 --- !u!23 &835407072454221482 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -4830944812581392756, guid: 5f2e8f4ea65c4df42a0eaceda5529d7f, type: 3}
@@ -9061,7 +9061,7 @@ MonoBehaviour:
   detectionScale: 1
   layerMask:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 1152
 --- !u!1 &1625830782884917770 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -6777104367151857108, guid: 5f2e8f4ea65c4df42a0eaceda5529d7f, type: 3}
@@ -9144,12 +9144,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   subTransform: {fileID: 300833961242968626}
   direction: {x: 0, y: 0, z: -1}
-  maxDistance: 150
+  maxDistance: 75
   matOff: {fileID: 2100000, guid: 6f811e3d9c64c634594a0926253da5ff, type: 2}
   matOn: {fileID: 2100000, guid: e860f13d2da53a640a9b40c559b74d74, type: 2}
   indicatorLight: {fileID: 9136644986078779869}
   baseBlinkSpeed: 1
-  detectionScale: 1
+  detectionScale: 4
   layerMask:
     serializedVersion: 2
     m_Bits: 512
@@ -9172,12 +9172,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   subTransform: {fileID: 300833961242968626}
   direction: {x: 0, y: 0, z: 1}
-  maxDistance: 150
+  maxDistance: 75
   matOff: {fileID: 2100000, guid: 6f811e3d9c64c634594a0926253da5ff, type: 2}
   matOn: {fileID: 2100000, guid: e860f13d2da53a640a9b40c559b74d74, type: 2}
   indicatorLight: {fileID: 9054464542656901265}
   baseBlinkSpeed: 1
-  detectionScale: 1
+  detectionScale: 4
   layerMask:
     serializedVersion: 2
     m_Bits: 512
@@ -9329,7 +9329,7 @@ MonoBehaviour:
   detectionScale: 1
   layerMask:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 1152
 --- !u!4 &4564485512272182977 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8630391790386802969, guid: 5f2e8f4ea65c4df42a0eaceda5529d7f, type: 3}
@@ -9354,12 +9354,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   subTransform: {fileID: 300833961242968626}
   direction: {x: 1, y: 0, z: 1}
-  maxDistance: 150
+  maxDistance: 75
   matOff: {fileID: 2100000, guid: 6f811e3d9c64c634594a0926253da5ff, type: 2}
   matOn: {fileID: 2100000, guid: e860f13d2da53a640a9b40c559b74d74, type: 2}
   indicatorLight: {fileID: 8769489386102836606}
   baseBlinkSpeed: 1
-  detectionScale: 1
+  detectionScale: 4
   layerMask:
     serializedVersion: 2
     m_Bits: 512
@@ -9448,7 +9448,7 @@ MonoBehaviour:
   detectionScale: 1
   layerMask:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 1152
 --- !u!1 &6500079697320641968 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -1344866496288066154, guid: 5f2e8f4ea65c4df42a0eaceda5529d7f, type: 3}
@@ -9468,12 +9468,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   subTransform: {fileID: 300833961242968626}
   direction: {x: -1, y: 0, z: 1}
-  maxDistance: 150
+  maxDistance: 75
   matOff: {fileID: 2100000, guid: 6f811e3d9c64c634594a0926253da5ff, type: 2}
   matOn: {fileID: 2100000, guid: e860f13d2da53a640a9b40c559b74d74, type: 2}
   indicatorLight: {fileID: 1188252705432339640}
   baseBlinkSpeed: 1
-  detectionScale: 1
+  detectionScale: 4
   layerMask:
     serializedVersion: 2
     m_Bits: 512
@@ -9549,12 +9549,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   subTransform: {fileID: 300833961242968626}
   direction: {x: -1, y: 0, z: 0}
-  maxDistance: 150
+  maxDistance: 75
   matOff: {fileID: 2100000, guid: 6f811e3d9c64c634594a0926253da5ff, type: 2}
   matOn: {fileID: 2100000, guid: e860f13d2da53a640a9b40c559b74d74, type: 2}
   indicatorLight: {fileID: 2355815113105832312}
   baseBlinkSpeed: 1
-  detectionScale: 1
+  detectionScale: 4
   layerMask:
     serializedVersion: 2
     m_Bits: 512
@@ -9600,7 +9600,7 @@ MonoBehaviour:
   detectionScale: 1
   layerMask:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 1152
 --- !u!1 &8304491171672585788 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4297131413938698726, guid: 5f2e8f4ea65c4df42a0eaceda5529d7f, type: 3}
@@ -9628,7 +9628,7 @@ MonoBehaviour:
   detectionScale: 1
   layerMask:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 1152
 --- !u!23 &8690253664023888097 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -3460166744729702201, guid: 5f2e8f4ea65c4df42a0eaceda5529d7f, type: 3}
@@ -9671,7 +9671,7 @@ MonoBehaviour:
   detectionScale: 1
   layerMask:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 1152
 --- !u!23 &9136644986078779869 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 5307805741837330939, guid: 5f2e8f4ea65c4df42a0eaceda5529d7f, type: 3}

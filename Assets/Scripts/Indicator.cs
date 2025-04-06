@@ -60,16 +60,30 @@ public class Indicator : MonoBehaviour
 	{
 		Vector3 origin = subTransform.position;
 
-		Vector3 halfExtents = (new Vector3(6, 6, 8) * detectionScale) / 2;
+		Vector3 halfExtents = new Vector3(6, 6, 8) / 2;
+		Vector3 halfExtentsScaled = (new Vector3(6, 6, 8) * detectionScale) / 2;
 		//float maxDistance = 10;
 
 		//Quaternion orientation = Quaternion.LookRotation(transform.TransformDirection(direction), transform.up);
 
 		DebugDrawBoxCast(origin, halfExtents, transform.TransformDirection(direction), subTransform.rotation, maxDistance, Color.blue);
+		if (detectionScale > 1)
+			DebugDrawBoxCast(origin, halfExtentsScaled, transform.TransformDirection(direction), subTransform.rotation, maxDistance * detectionScale, Color.magenta);
 
-		if(Physics.BoxCast(origin, halfExtents, transform.TransformDirection(direction), out RaycastHit hit, subTransform.rotation, maxDistance, layerMask))
+		if (Physics.BoxCast(origin, halfExtents, transform.TransformDirection(direction), out RaycastHit hit, subTransform.rotation, maxDistance, layerMask))
 		{
 			float t = 1f - (hit.distance / maxDistance);
+			blinkSpeed = baseBlinkSpeed / t;
+			blinkSpeed = Mathf.Clamp(blinkSpeed, 0.01f, 5);
+			if (!isBlinking)
+			{
+				isBlinking = true;
+				StartCoroutine(Blink());
+			}
+		}
+		else if(detectionScale > 1 && Physics.BoxCast(origin, halfExtentsScaled, transform.TransformDirection(direction), out RaycastHit hitScaled, subTransform.rotation, maxDistance * detectionScale, layerMask))
+		{
+			float t = 1f - (hitScaled.distance / maxDistance);
 			blinkSpeed = baseBlinkSpeed / t;
 			blinkSpeed = Mathf.Clamp(blinkSpeed, 0.01f, 5);
 			if (!isBlinking)

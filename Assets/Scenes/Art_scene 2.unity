@@ -1226,7 +1226,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7862066410504629709, guid: aa214ff4cff9a7e43a552bc901ac3250, type: 3}
       propertyPath: speed
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7862066410504629709, guid: aa214ff4cff9a7e43a552bc901ac3250, type: 3}
       propertyPath: zoneSize.x
@@ -1245,6 +1245,10 @@ PrefabInstance:
       value: -100
       objectReference: {fileID: 0}
     - target: {fileID: 7862066410504629709, guid: aa214ff4cff9a7e43a552bc901ac3250, type: 3}
+      propertyPath: attackDistance
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7862066410504629709, guid: aa214ff4cff9a7e43a552bc901ac3250, type: 3}
       propertyPath: escapeDistance
       value: 60
       objectReference: {fileID: 0}
@@ -1255,6 +1259,10 @@ PrefabInstance:
     - target: {fileID: 7862066410504629709, guid: aa214ff4cff9a7e43a552bc901ac3250, type: 3}
       propertyPath: loseTargetDistance
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7862066410504629709, guid: aa214ff4cff9a7e43a552bc901ac3250, type: 3}
+      propertyPath: obstacleAvoidanceRange
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2001,7 +2009,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7862066410504629709, guid: aa214ff4cff9a7e43a552bc901ac3250, type: 3}
       propertyPath: speed
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7862066410504629709, guid: aa214ff4cff9a7e43a552bc901ac3250, type: 3}
       propertyPath: zoneSize.x
@@ -2020,6 +2028,10 @@ PrefabInstance:
       value: -100
       objectReference: {fileID: 0}
     - target: {fileID: 7862066410504629709, guid: aa214ff4cff9a7e43a552bc901ac3250, type: 3}
+      propertyPath: attackDistance
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7862066410504629709, guid: aa214ff4cff9a7e43a552bc901ac3250, type: 3}
       propertyPath: escapeDistance
       value: 60
       objectReference: {fileID: 0}
@@ -2030,6 +2042,10 @@ PrefabInstance:
     - target: {fileID: 7862066410504629709, guid: aa214ff4cff9a7e43a552bc901ac3250, type: 3}
       propertyPath: loseTargetDistance
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7862066410504629709, guid: aa214ff4cff9a7e43a552bc901ac3250, type: 3}
+      propertyPath: obstacleAvoidanceRange
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2208,7 +2224,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7862066410504629709, guid: aa214ff4cff9a7e43a552bc901ac3250, type: 3}
       propertyPath: speed
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7862066410504629709, guid: aa214ff4cff9a7e43a552bc901ac3250, type: 3}
       propertyPath: zoneSize.x
@@ -2227,6 +2243,10 @@ PrefabInstance:
       value: -100
       objectReference: {fileID: 0}
     - target: {fileID: 7862066410504629709, guid: aa214ff4cff9a7e43a552bc901ac3250, type: 3}
+      propertyPath: attackDistance
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7862066410504629709, guid: aa214ff4cff9a7e43a552bc901ac3250, type: 3}
       propertyPath: escapeDistance
       value: 60
       objectReference: {fileID: 0}
@@ -2237,6 +2257,10 @@ PrefabInstance:
     - target: {fileID: 7862066410504629709, guid: aa214ff4cff9a7e43a552bc901ac3250, type: 3}
       propertyPath: loseTargetDistance
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7862066410504629709, guid: aa214ff4cff9a7e43a552bc901ac3250, type: 3}
+      propertyPath: obstacleAvoidanceRange
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2903,7 +2927,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7862066410504629709, guid: aa214ff4cff9a7e43a552bc901ac3250, type: 3}
       propertyPath: speed
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7862066410504629709, guid: aa214ff4cff9a7e43a552bc901ac3250, type: 3}
       propertyPath: zoneSize.x
@@ -2922,6 +2946,10 @@ PrefabInstance:
       value: -100
       objectReference: {fileID: 0}
     - target: {fileID: 7862066410504629709, guid: aa214ff4cff9a7e43a552bc901ac3250, type: 3}
+      propertyPath: attackDistance
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7862066410504629709, guid: aa214ff4cff9a7e43a552bc901ac3250, type: 3}
       propertyPath: escapeDistance
       value: 60
       objectReference: {fileID: 0}
@@ -2932,6 +2960,10 @@ PrefabInstance:
     - target: {fileID: 7862066410504629709, guid: aa214ff4cff9a7e43a552bc901ac3250, type: 3}
       propertyPath: loseTargetDistance
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7862066410504629709, guid: aa214ff4cff9a7e43a552bc901ac3250, type: 3}
+      propertyPath: obstacleAvoidanceRange
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3072,7 +3104,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7862066410504629709, guid: aa214ff4cff9a7e43a552bc901ac3250, type: 3}
       propertyPath: speed
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7862066410504629709, guid: aa214ff4cff9a7e43a552bc901ac3250, type: 3}
       propertyPath: zoneSize.x
@@ -3091,6 +3123,10 @@ PrefabInstance:
       value: -100
       objectReference: {fileID: 0}
     - target: {fileID: 7862066410504629709, guid: aa214ff4cff9a7e43a552bc901ac3250, type: 3}
+      propertyPath: attackDistance
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7862066410504629709, guid: aa214ff4cff9a7e43a552bc901ac3250, type: 3}
       propertyPath: escapeDistance
       value: 60
       objectReference: {fileID: 0}
@@ -3101,6 +3137,10 @@ PrefabInstance:
     - target: {fileID: 7862066410504629709, guid: aa214ff4cff9a7e43a552bc901ac3250, type: 3}
       propertyPath: loseTargetDistance
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7862066410504629709, guid: aa214ff4cff9a7e43a552bc901ac3250, type: 3}
+      propertyPath: obstacleAvoidanceRange
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4456,7 +4496,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7862066410504629709, guid: aa214ff4cff9a7e43a552bc901ac3250, type: 3}
       propertyPath: speed
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7862066410504629709, guid: aa214ff4cff9a7e43a552bc901ac3250, type: 3}
       propertyPath: zoneSize.x
@@ -4475,6 +4515,10 @@ PrefabInstance:
       value: -100
       objectReference: {fileID: 0}
     - target: {fileID: 7862066410504629709, guid: aa214ff4cff9a7e43a552bc901ac3250, type: 3}
+      propertyPath: attackDistance
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7862066410504629709, guid: aa214ff4cff9a7e43a552bc901ac3250, type: 3}
       propertyPath: escapeDistance
       value: 60
       objectReference: {fileID: 0}
@@ -4485,6 +4529,10 @@ PrefabInstance:
     - target: {fileID: 7862066410504629709, guid: aa214ff4cff9a7e43a552bc901ac3250, type: 3}
       propertyPath: loseTargetDistance
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7862066410504629709, guid: aa214ff4cff9a7e43a552bc901ac3250, type: 3}
+      propertyPath: obstacleAvoidanceRange
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5171,7 +5219,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7862066410504629709, guid: aa214ff4cff9a7e43a552bc901ac3250, type: 3}
       propertyPath: speed
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7862066410504629709, guid: aa214ff4cff9a7e43a552bc901ac3250, type: 3}
       propertyPath: zoneSize.x
@@ -5190,6 +5238,10 @@ PrefabInstance:
       value: -100
       objectReference: {fileID: 0}
     - target: {fileID: 7862066410504629709, guid: aa214ff4cff9a7e43a552bc901ac3250, type: 3}
+      propertyPath: attackDistance
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7862066410504629709, guid: aa214ff4cff9a7e43a552bc901ac3250, type: 3}
       propertyPath: escapeDistance
       value: 60
       objectReference: {fileID: 0}
@@ -5200,6 +5252,10 @@ PrefabInstance:
     - target: {fileID: 7862066410504629709, guid: aa214ff4cff9a7e43a552bc901ac3250, type: 3}
       propertyPath: loseTargetDistance
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7862066410504629709, guid: aa214ff4cff9a7e43a552bc901ac3250, type: 3}
+      propertyPath: obstacleAvoidanceRange
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6041,7 +6097,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7862066410504629709, guid: aa214ff4cff9a7e43a552bc901ac3250, type: 3}
       propertyPath: speed
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7862066410504629709, guid: aa214ff4cff9a7e43a552bc901ac3250, type: 3}
       propertyPath: zoneSize.x
@@ -6060,6 +6116,10 @@ PrefabInstance:
       value: -100
       objectReference: {fileID: 0}
     - target: {fileID: 7862066410504629709, guid: aa214ff4cff9a7e43a552bc901ac3250, type: 3}
+      propertyPath: attackDistance
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7862066410504629709, guid: aa214ff4cff9a7e43a552bc901ac3250, type: 3}
       propertyPath: escapeDistance
       value: 60
       objectReference: {fileID: 0}
@@ -6070,6 +6130,10 @@ PrefabInstance:
     - target: {fileID: 7862066410504629709, guid: aa214ff4cff9a7e43a552bc901ac3250, type: 3}
       propertyPath: loseTargetDistance
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7862066410504629709, guid: aa214ff4cff9a7e43a552bc901ac3250, type: 3}
+      propertyPath: obstacleAvoidanceRange
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6157,7 +6221,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7862066410504629709, guid: aa214ff4cff9a7e43a552bc901ac3250, type: 3}
       propertyPath: speed
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7862066410504629709, guid: aa214ff4cff9a7e43a552bc901ac3250, type: 3}
       propertyPath: zoneSize.x
@@ -6176,6 +6240,10 @@ PrefabInstance:
       value: -100
       objectReference: {fileID: 0}
     - target: {fileID: 7862066410504629709, guid: aa214ff4cff9a7e43a552bc901ac3250, type: 3}
+      propertyPath: attackDistance
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7862066410504629709, guid: aa214ff4cff9a7e43a552bc901ac3250, type: 3}
       propertyPath: escapeDistance
       value: 60
       objectReference: {fileID: 0}
@@ -6186,6 +6254,10 @@ PrefabInstance:
     - target: {fileID: 7862066410504629709, guid: aa214ff4cff9a7e43a552bc901ac3250, type: 3}
       propertyPath: loseTargetDistance
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7862066410504629709, guid: aa214ff4cff9a7e43a552bc901ac3250, type: 3}
+      propertyPath: obstacleAvoidanceRange
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7092,7 +7164,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7862066410504629709, guid: aa214ff4cff9a7e43a552bc901ac3250, type: 3}
       propertyPath: speed
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7862066410504629709, guid: aa214ff4cff9a7e43a552bc901ac3250, type: 3}
       propertyPath: zoneSize.x
@@ -7111,6 +7183,10 @@ PrefabInstance:
       value: -100
       objectReference: {fileID: 0}
     - target: {fileID: 7862066410504629709, guid: aa214ff4cff9a7e43a552bc901ac3250, type: 3}
+      propertyPath: attackDistance
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7862066410504629709, guid: aa214ff4cff9a7e43a552bc901ac3250, type: 3}
       propertyPath: escapeDistance
       value: 60
       objectReference: {fileID: 0}
@@ -7121,6 +7197,10 @@ PrefabInstance:
     - target: {fileID: 7862066410504629709, guid: aa214ff4cff9a7e43a552bc901ac3250, type: 3}
       propertyPath: loseTargetDistance
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7862066410504629709, guid: aa214ff4cff9a7e43a552bc901ac3250, type: 3}
+      propertyPath: obstacleAvoidanceRange
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
