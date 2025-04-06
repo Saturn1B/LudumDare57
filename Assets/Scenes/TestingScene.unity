@@ -795,9 +795,105 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 507240394023131281, guid: f882eb3997d1a87479e358a6493759b2, type: 3}
+      propertyPath: maxDistance
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 507240394023131281, guid: f882eb3997d1a87479e358a6493759b2, type: 3}
+      propertyPath: detectionScale
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 527777809526801953, guid: f882eb3997d1a87479e358a6493759b2, type: 3}
+      propertyPath: showDebug
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1100776638365766097, guid: f882eb3997d1a87479e358a6493759b2, type: 3}
+      propertyPath: showDebug
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1100776638365766097, guid: f882eb3997d1a87479e358a6493759b2, type: 3}
+      propertyPath: useShipOrientation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2666822323777675310, guid: f882eb3997d1a87479e358a6493759b2, type: 3}
+      propertyPath: maxDistance
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2666822323777675310, guid: f882eb3997d1a87479e358a6493759b2, type: 3}
+      propertyPath: detectionScale
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2759655168276615355, guid: f882eb3997d1a87479e358a6493759b2, type: 3}
+      propertyPath: maxDistance
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2759655168276615355, guid: f882eb3997d1a87479e358a6493759b2, type: 3}
+      propertyPath: detectionScale
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2984844991850509866, guid: f882eb3997d1a87479e358a6493759b2, type: 3}
+      propertyPath: maxDistance
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2984844991850509866, guid: f882eb3997d1a87479e358a6493759b2, type: 3}
+      propertyPath: detectionScale
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2984844991850509866, guid: f882eb3997d1a87479e358a6493759b2, type: 3}
+      propertyPath: useShipOrientation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998532312874453735, guid: f882eb3997d1a87479e358a6493759b2, type: 3}
+      propertyPath: showDebug
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4365931144165196011, guid: f882eb3997d1a87479e358a6493759b2, type: 3}
+      propertyPath: maxDistance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4365931144165196011, guid: f882eb3997d1a87479e358a6493759b2, type: 3}
+      propertyPath: detectionScale
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5177712749750845013, guid: f882eb3997d1a87479e358a6493759b2, type: 3}
+      propertyPath: maxDistance
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5177712749750845013, guid: f882eb3997d1a87479e358a6493759b2, type: 3}
+      propertyPath: detectionScale
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5699993325163100854, guid: f882eb3997d1a87479e358a6493759b2, type: 3}
+      propertyPath: showDebug
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6948904127192253220, guid: f882eb3997d1a87479e358a6493759b2, type: 3}
+      propertyPath: showDebug
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6948904127192253220, guid: f882eb3997d1a87479e358a6493759b2, type: 3}
+      propertyPath: useShipOrientation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7182544046052508487, guid: f882eb3997d1a87479e358a6493759b2, type: 3}
+      propertyPath: showDebug
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7199990606702552244, guid: f882eb3997d1a87479e358a6493759b2, type: 3}
       propertyPath: m_Name
       value: Submarine
+      objectReference: {fileID: 0}
+    - target: {fileID: 9161525393631819627, guid: f882eb3997d1a87479e358a6493759b2, type: 3}
+      propertyPath: maxDistance
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 9161525393631819627, guid: f882eb3997d1a87479e358a6493759b2, type: 3}
+      propertyPath: detectionScale
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9161525393631819627, guid: f882eb3997d1a87479e358a6493759b2, type: 3}
+      propertyPath: useShipOrientation
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

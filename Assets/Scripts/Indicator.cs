@@ -15,6 +15,8 @@ public class Indicator : MonoBehaviour
 	[SerializeField] private float baseBlinkSpeed;
 	public float detectionScale = 1f;
 	[SerializeField] private LayerMask layerMask;
+	[SerializeField] private bool useShipOrientation;
+	[SerializeField] private bool showDebug = true;
 	private float blinkSpeed;
 
 	bool isBlinking = false;
@@ -64,13 +66,18 @@ public class Indicator : MonoBehaviour
 		Vector3 halfExtentsScaled = (new Vector3(6, 6, 8) * detectionScale) / 2;
 		//float maxDistance = 10;
 
-		//Quaternion orientation = Quaternion.LookRotation(transform.TransformDirection(direction), transform.up);
+		Quaternion orientation = subTransform.rotation;
+		if (useShipOrientation)
+			orientation = Quaternion.LookRotation(transform.TransformDirection(direction), transform.up);
 
-		DebugDrawBoxCast(origin, halfExtents, transform.TransformDirection(direction), subTransform.rotation, maxDistance, Color.blue);
-		if (detectionScale > 1)
-			DebugDrawBoxCast(origin, halfExtentsScaled, transform.TransformDirection(direction), subTransform.rotation, maxDistance * detectionScale, Color.magenta);
+		if (showDebug)
+		{
+			DebugDrawBoxCast(origin, halfExtents, transform.TransformDirection(direction), orientation, maxDistance, Color.blue);
+			if (detectionScale > 1)
+				DebugDrawBoxCast(origin, halfExtentsScaled, transform.TransformDirection(direction), orientation, maxDistance * detectionScale, Color.magenta);
+		}
 
-		if (Physics.BoxCast(origin, halfExtents, transform.TransformDirection(direction), out RaycastHit hit, subTransform.rotation, maxDistance, layerMask))
+		if (Physics.BoxCast(origin, halfExtents, transform.TransformDirection(direction), out RaycastHit hit, orientation, maxDistance, layerMask))
 		{
 			float t = 1f - (hit.distance / maxDistance);
 			blinkSpeed = baseBlinkSpeed / t;
@@ -81,9 +88,9 @@ public class Indicator : MonoBehaviour
 				StartCoroutine(Blink());
 			}
 		}
-		else if(detectionScale > 1 && Physics.BoxCast(origin, halfExtentsScaled, transform.TransformDirection(direction), out RaycastHit hitScaled, subTransform.rotation, maxDistance * detectionScale, layerMask))
+		else if(detectionScale > 1 && Physics.BoxCast(origin, halfExtentsScaled, transform.TransformDirection(direction), out RaycastHit hitScaled, orientation, maxDistance * detectionScale, layerMask))
 		{
-			float t = 1f - (hitScaled.distance / maxDistance);
+			float t = 1f - (hitScaled.distance / (maxDistance * detectionScale));
 			blinkSpeed = baseBlinkSpeed / t;
 			blinkSpeed = Mathf.Clamp(blinkSpeed, 0.01f, 5);
 			if (!isBlinking)
