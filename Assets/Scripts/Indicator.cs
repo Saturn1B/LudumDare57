@@ -8,8 +8,10 @@ public class Indicator : MonoBehaviour
 	[SerializeField] private Transform subTransform;
 	[SerializeField] private Vector3 direction;
 	[SerializeField] private float maxDistance;
-	[SerializeField] private Image indicatorLight;
-	[SerializeField] private Color colorOff, colorOn;
+	//[SerializeField] private Image indicatorLight;
+	//[SerializeField] private Color colorOff, colorOn;
+	[SerializeField] private Material matOff, matOn;
+	[SerializeField] private MeshRenderer indicatorLight;
 	[SerializeField] private float baseBlinkSpeed;
 	public float detectionScale = 1f;
 	[SerializeField] private LayerMask layerMask;
@@ -58,12 +60,12 @@ public class Indicator : MonoBehaviour
 	{
 		Vector3 origin = subTransform.position;
 
-		Vector3 halfExtents = (new Vector3(4, 2, 8) * detectionScale) / 2;
+		Vector3 halfExtents = (new Vector3(5, 5, 7) * detectionScale) / 2;
 		//float maxDistance = 10;
 
 		//Quaternion orientation = Quaternion.LookRotation(transform.TransformDirection(direction), transform.up);
 
-		DebugDrawBoxCast(origin, halfExtents, transform.TransformDirection(direction), subTransform.rotation, maxDistance, colorOn);
+		DebugDrawBoxCast(origin, halfExtents, transform.TransformDirection(direction), subTransform.rotation, maxDistance, Color.blue);
 
 		if(Physics.BoxCast(origin, halfExtents, transform.TransformDirection(direction), out RaycastHit hit, subTransform.rotation, maxDistance, layerMask))
 		{
@@ -82,18 +84,18 @@ public class Indicator : MonoBehaviour
 			{
 				isBlinking = false;
 				StopAllCoroutines();
-				indicatorLight.color = colorOff;
+				indicatorLight.material = matOff;
 			}
 		}
 	}
 
 	private IEnumerator Blink()
 	{
-		indicatorLight.color = colorOn;
+		indicatorLight.material = matOn;
 
 		yield return new WaitForSeconds(blinkSpeed / 10);
 
-		indicatorLight.color = colorOff;
+		indicatorLight.material = matOff;
 
 		yield return new WaitForSeconds(blinkSpeed / 10);
 
