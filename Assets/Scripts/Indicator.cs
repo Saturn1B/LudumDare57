@@ -15,6 +15,7 @@ public class Indicator : MonoBehaviour
 	[SerializeField] private float baseBlinkSpeed;
 	public float detectionScale = 1f;
 	[SerializeField] private LayerMask layerMask;
+	[SerializeField] private LayerMask scaledLayerMask;
 	[SerializeField] private bool useShipOrientation;
 	[SerializeField] private bool showDebug = true;
 	private float blinkSpeed;
@@ -88,7 +89,7 @@ public class Indicator : MonoBehaviour
 				StartCoroutine(Blink());
 			}
 		}
-		else if(detectionScale > 1 && Physics.BoxCast(origin, halfExtentsScaled, transform.TransformDirection(direction), out RaycastHit hitScaled, orientation, maxDistance * detectionScale, layerMask))
+		else if(detectionScale > 1 && Physics.BoxCast(origin, halfExtentsScaled, transform.TransformDirection(direction), out RaycastHit hitScaled, orientation, maxDistance * detectionScale, scaledLayerMask))
 		{
 			float t = 1f - (hitScaled.distance / (maxDistance * detectionScale));
 			blinkSpeed = baseBlinkSpeed / t;

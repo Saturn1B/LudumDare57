@@ -9363,6 +9363,9 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 512
+  scaledLayerMask:
+    serializedVersion: 2
+    m_Bits: 512
   useShipOrientation: 0
   showDebug: 0
 --- !u!4 &188345185539754232 stripped
@@ -9399,7 +9402,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   subTransform: {fileID: 300833961242968626}
   direction: {x: 0, y: -1, z: 0}
-  maxDistance: 15
+  maxDistance: 5
   matOff: {fileID: 2100000, guid: 6f811e3d9c64c634594a0926253da5ff, type: 2}
   matOn: {fileID: 2100000, guid: 8cc22a94ff54da84fbf33a82251db598, type: 2}
   indicatorLight: {fileID: 5769830449991380599}
@@ -9408,6 +9411,9 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 1152
+  scaledLayerMask:
+    serializedVersion: 2
+    m_Bits: 1024
   useShipOrientation: 0
   showDebug: 1
 --- !u!23 &835407072454221482 stripped
@@ -9502,7 +9508,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   subTransform: {fileID: 300833961242968626}
   direction: {x: 1, y: 0, z: 0}
-  maxDistance: 25
+  maxDistance: 20
   matOff: {fileID: 2100000, guid: 6f811e3d9c64c634594a0926253da5ff, type: 2}
   matOn: {fileID: 2100000, guid: 8cc22a94ff54da84fbf33a82251db598, type: 2}
   indicatorLight: {fileID: 3730554712339198657}
@@ -9511,6 +9517,9 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 1152
+  scaledLayerMask:
+    serializedVersion: 2
+    m_Bits: 1024
   useShipOrientation: 0
   showDebug: 1
 --- !u!1 &1625830782884917770 stripped
@@ -9604,6 +9613,9 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 512
+  scaledLayerMask:
+    serializedVersion: 2
+    m_Bits: 512
   useShipOrientation: 0
   showDebug: 0
 --- !u!1 &3091560470394603688 stripped
@@ -9632,6 +9644,9 @@ MonoBehaviour:
   baseBlinkSpeed: 1
   detectionScale: 4
   layerMask:
+    serializedVersion: 2
+    m_Bits: 512
+  scaledLayerMask:
     serializedVersion: 2
     m_Bits: 512
   useShipOrientation: 0
@@ -9776,7 +9791,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   subTransform: {fileID: 300833961242968626}
   direction: {x: -1, y: 0, z: 1}
-  maxDistance: 25
+  maxDistance: 20
   matOff: {fileID: 2100000, guid: 6f811e3d9c64c634594a0926253da5ff, type: 2}
   matOn: {fileID: 2100000, guid: 8cc22a94ff54da84fbf33a82251db598, type: 2}
   indicatorLight: {fileID: 835407072454221482}
@@ -9785,6 +9800,9 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 1152
+  scaledLayerMask:
+    serializedVersion: 2
+    m_Bits: 1024
   useShipOrientation: 1
   showDebug: 1
 --- !u!4 &4564485512272182977 stripped
@@ -9818,6 +9836,9 @@ MonoBehaviour:
   baseBlinkSpeed: 1
   detectionScale: 4
   layerMask:
+    serializedVersion: 2
+    m_Bits: 512
+  scaledLayerMask:
     serializedVersion: 2
     m_Bits: 512
   useShipOrientation: 1
@@ -9899,7 +9920,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   subTransform: {fileID: 300833961242968626}
   direction: {x: 0, y: 0, z: -1}
-  maxDistance: 25
+  maxDistance: 20
   matOff: {fileID: 2100000, guid: 6f811e3d9c64c634594a0926253da5ff, type: 2}
   matOn: {fileID: 2100000, guid: 8cc22a94ff54da84fbf33a82251db598, type: 2}
   indicatorLight: {fileID: 8690253664023888097}
@@ -9908,6 +9929,9 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 1152
+  scaledLayerMask:
+    serializedVersion: 2
+    m_Bits: 1024
   useShipOrientation: 0
   showDebug: 1
 --- !u!1 &6500079697320641968 stripped
@@ -9936,6 +9960,9 @@ MonoBehaviour:
   baseBlinkSpeed: 1
   detectionScale: 4
   layerMask:
+    serializedVersion: 2
+    m_Bits: 512
+  scaledLayerMask:
     serializedVersion: 2
     m_Bits: 512
   useShipOrientation: 1
@@ -10021,6 +10048,9 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 512
+  scaledLayerMask:
+    serializedVersion: 2
+    m_Bits: 512
   useShipOrientation: 0
   showDebug: 0
 --- !u!4 &7237036078758988371 stripped
@@ -10057,7 +10087,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   subTransform: {fileID: 300833961242968626}
   direction: {x: 0, y: 0, z: 1}
-  maxDistance: 25
+  maxDistance: 20
   matOff: {fileID: 2100000, guid: 6f811e3d9c64c634594a0926253da5ff, type: 2}
   matOn: {fileID: 2100000, guid: 8cc22a94ff54da84fbf33a82251db598, type: 2}
   indicatorLight: {fileID: 1216594751834714441}
@@ -10066,6 +10096,9 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 1152
+  scaledLayerMask:
+    serializedVersion: 2
+    m_Bits: 1024
   useShipOrientation: 0
   showDebug: 1
 --- !u!1 &8304491171672585788 stripped
@@ -10087,7 +10120,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   subTransform: {fileID: 300833961242968626}
   direction: {x: -1, y: 0, z: 0}
-  maxDistance: 25
+  maxDistance: 20
   matOff: {fileID: 2100000, guid: 6f811e3d9c64c634594a0926253da5ff, type: 2}
   matOn: {fileID: 2100000, guid: 8cc22a94ff54da84fbf33a82251db598, type: 2}
   indicatorLight: {fileID: 501992729952927703}
@@ -10096,6 +10129,9 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 1152
+  scaledLayerMask:
+    serializedVersion: 2
+    m_Bits: 1024
   useShipOrientation: 0
   showDebug: 1
 --- !u!23 &8690253664023888097 stripped
@@ -10132,7 +10168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   subTransform: {fileID: 300833961242968626}
   direction: {x: 1, y: 0, z: 1}
-  maxDistance: 25
+  maxDistance: 20
   matOff: {fileID: 2100000, guid: 6f811e3d9c64c634594a0926253da5ff, type: 2}
   matOn: {fileID: 2100000, guid: 8cc22a94ff54da84fbf33a82251db598, type: 2}
   indicatorLight: {fileID: 4126026786833113559}
@@ -10141,6 +10177,9 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 1152
+  scaledLayerMask:
+    serializedVersion: 2
+    m_Bits: 1024
   useShipOrientation: 1
   showDebug: 1
 --- !u!23 &9136644986078779869 stripped
