@@ -241,6 +241,22 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!23 &676487583 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 878268753109269087, guid: f882eb3997d1a87479e358a6493759b2, type: 3}
+  m_PrefabInstance: {fileID: 7472667102330872441}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &955373568 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4626668515320781238, guid: f882eb3997d1a87479e358a6493759b2, type: 3}
+  m_PrefabInstance: {fileID: 7472667102330872441}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91682f4b44733f54ebe50373c440f135, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &993964843
 GameObject:
   m_ObjectHideFlags: 0
@@ -795,9 +811,93 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1472047056536420985, guid: f882eb3997d1a87479e358a6493759b2, type: 3}
+      propertyPath: _interactionEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RotateYaw
+      objectReference: {fileID: 0}
+    - target: {fileID: 2803644899647196201, guid: f882eb3997d1a87479e358a6493759b2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 26a37624745c99642a3ca5f8f18a03dd, type: 2}
+    - target: {fileID: 3697627708714944537, guid: f882eb3997d1a87479e358a6493759b2, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 3697627708714944537, guid: f882eb3997d1a87479e358a6493759b2, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3748172540675488721, guid: f882eb3997d1a87479e358a6493759b2, type: 3}
+      propertyPath: _interactionEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RotateYaw
+      objectReference: {fileID: 0}
+    - target: {fileID: 3764459948611267788, guid: f882eb3997d1a87479e358a6493759b2, type: 3}
+      propertyPath: _interactionEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Move
+      objectReference: {fileID: 0}
+    - target: {fileID: 3799846722493055045, guid: f882eb3997d1a87479e358a6493759b2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 064effcfd30f20042b54c54236595eef, type: 2}
+    - target: {fileID: 4442869364142063922, guid: f882eb3997d1a87479e358a6493759b2, type: 3}
+      propertyPath: _interactionEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RotatePitch
+      objectReference: {fileID: 0}
+    - target: {fileID: 4922879711400158932, guid: f882eb3997d1a87479e358a6493759b2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 26a37624745c99642a3ca5f8f18a03dd, type: 2}
+    - target: {fileID: 4940818352590584738, guid: f882eb3997d1a87479e358a6493759b2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 26a37624745c99642a3ca5f8f18a03dd, type: 2}
+    - target: {fileID: 5238274471860457108, guid: f882eb3997d1a87479e358a6493759b2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 064effcfd30f20042b54c54236595eef, type: 2}
+    - target: {fileID: 6033861553724527240, guid: f882eb3997d1a87479e358a6493759b2, type: 3}
+      propertyPath: glass
+      value: 
+      objectReference: {fileID: 676487583}
+    - target: {fileID: 6033861553724527240, guid: f882eb3997d1a87479e358a6493759b2, type: 3}
+      propertyPath: cameraController
+      value: 
+      objectReference: {fileID: 955373568}
+    - target: {fileID: 6033861553724527240, guid: f882eb3997d1a87479e358a6493759b2, type: 3}
+      propertyPath: damagedGlassMat.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6033861553724527240, guid: f882eb3997d1a87479e358a6493759b2, type: 3}
+      propertyPath: damagedGlassMat.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: cc21be8522a39e649bd08d80a9b022b5, type: 2}
+    - target: {fileID: 6033861553724527240, guid: f882eb3997d1a87479e358a6493759b2, type: 3}
+      propertyPath: damagedGlassMat.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 62c2d63549cda514e9ea59b359d2048e, type: 2}
+    - target: {fileID: 6033861553724527240, guid: f882eb3997d1a87479e358a6493759b2, type: 3}
+      propertyPath: damagedGlassMat.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0de02c0cc34d8f6498edc70123145c89, type: 2}
+    - target: {fileID: 6033861553724527240, guid: f882eb3997d1a87479e358a6493759b2, type: 3}
+      propertyPath: damagedGlassMat.Array.data[3]
+      value: 
+      objectReference: {fileID: 2100000, guid: b6ef538d1eab58048b9a026091611f9d, type: 2}
+    - target: {fileID: 7069486745231533111, guid: f882eb3997d1a87479e358a6493759b2, type: 3}
+      propertyPath: _interactionEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Move
+      objectReference: {fileID: 0}
+    - target: {fileID: 7146452784627465138, guid: f882eb3997d1a87479e358a6493759b2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 26a37624745c99642a3ca5f8f18a03dd, type: 2}
     - target: {fileID: 7199990606702552244, guid: f882eb3997d1a87479e358a6493759b2, type: 3}
       propertyPath: m_Name
       value: Submarine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8571722796614881610, guid: f882eb3997d1a87479e358a6493759b2, type: 3}
+      propertyPath: _interactionEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RotatePitch
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

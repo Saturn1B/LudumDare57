@@ -61,4 +61,36 @@ public class CameraController : MonoBehaviour
 
         return Mathf.Clamp(angle, min, max);
     }
+
+    // Add these at the top of the class
+    private Vector3 originalCamPos;
+    private Coroutine shakeCoroutine;
+
+    // Call this from damage logic to start the shake
+    public void ShakeCamera(float duration = 0.2f, float magnitude = 0.1f)
+    {
+        if (shakeCoroutine != null)
+            StopCoroutine(shakeCoroutine);
+
+        shakeCoroutine = StartCoroutine(DoCameraShake(duration, magnitude));
+    }
+
+    private IEnumerator DoCameraShake(float duration, float magnitude)
+    {
+        float elapsed = 0f;
+        originalCamPos = playerCamera.transform.localPosition;
+
+        while (elapsed < duration)
+        {
+            float x = Random.Range(-1f, 1f) * magnitude;
+            float y = Random.Range(-1f, 1f) * magnitude;
+
+            playerCamera.transform.localPosition = originalCamPos + new Vector3(x, y, 0);
+
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        playerCamera.transform.localPosition = originalCamPos;
+    }
 }

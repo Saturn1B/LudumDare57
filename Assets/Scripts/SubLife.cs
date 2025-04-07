@@ -16,6 +16,9 @@ public class SubLife : MonoBehaviour
 	[SerializeField] private AudioSource collisionNoise;
 	[SerializeField] private AudioSource warningNoise;
 	[SerializeField] private AudioSource explosionNoise;
+	[SerializeField] private Material[] damagedGlassMat;
+	[SerializeField] private MeshRenderer glass;
+	[SerializeField] private CameraController cameraController;
 	private float blinkSpeed;
     private int currentLife;
 
@@ -27,6 +30,8 @@ public class SubLife : MonoBehaviour
 	public void TakeDamage(int amount)
 	{
 		if (currentLife <= 0) return;
+
+		cameraController.ShakeCamera(.1f, .05f);
 
 		currentLife -= amount;
 		if(currentLife <= 0)
@@ -64,6 +69,9 @@ public class SubLife : MonoBehaviour
 	{
 		float ratio = (float)currentLife / (float)subMaxLife;
 		int newRatio = Mathf.CeilToInt(lifeBars.Length * ratio);
+
+		if(newRatio <= 4 & newRatio > 0)
+			glass.material = damagedGlassMat[newRatio - 1];
 
 		for (int i = 0; i < lifeBars.Length; i++)
 		{
