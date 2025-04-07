@@ -19,6 +19,7 @@ public class MonsterAI : MonoBehaviour
 	[SerializeField] private float escapeDistance;
 
 	[SerializeField] private AudioSource sharkBiteNoise;
+	[SerializeField] private AudioSource sharkChaseNoise;
 
 	private float cooldownTimer = 0f;
 	private bool hasAttacked = false;
@@ -57,7 +58,9 @@ public class MonsterAI : MonoBehaviour
 					currentState = State.Attacking;
 					hasAttacked = false;
 				}
-				LosePlayerCheck();
+				cooldownTimer -= Time.deltaTime;
+				if (cooldownTimer <= 0f)
+					LosePlayerCheck();
 				break;
 			case State.Attacking:
 				Attack();
@@ -110,6 +113,8 @@ public class MonsterAI : MonoBehaviour
 		if(player != null && Vector3.Distance(transform.position, player.position) <= detectionRadius)
 		{
 			currentState = State.Chasing;
+			sharkChaseNoise.Play();
+			cooldownTimer = attackCooldown;
 		}
 	}
 

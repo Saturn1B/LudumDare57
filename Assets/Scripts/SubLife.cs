@@ -17,6 +17,7 @@ public class SubLife : MonoBehaviour
 	[SerializeField] private AudioSource warningNoise;
 	[SerializeField] private AudioSource explosionNoise;
 	[SerializeField] private Material[] damagedGlassMat;
+	[SerializeField] private GameObject[] leekFx;
 	[SerializeField] private MeshRenderer glass;
 	[SerializeField] private CameraController cameraController;
 	private float blinkSpeed;
@@ -71,7 +72,11 @@ public class SubLife : MonoBehaviour
 		int newRatio = Mathf.CeilToInt(lifeBars.Length * ratio);
 
 		if(newRatio <= 4 & newRatio > 0)
+        {
 			glass.material = damagedGlassMat[newRatio - 1];
+			leekFx[newRatio - 1].SetActive(true);
+		}
+
 
 		for (int i = 0; i < lifeBars.Length; i++)
 		{

@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+        isGameStarted = false;
         mainCanvas.SetActive(false);
         cameraMain.GetComponent<Camera>().fieldOfView = 30;
         StartCoroutine(ShowDialog());
