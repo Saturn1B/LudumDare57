@@ -40,6 +40,8 @@ public class MonsterAI : MonoBehaviour
 
 	private void Update()
 	{
+		if (!GameManager.isGameStarted) return;
+
 		StayInZone();
 
 		switch (currentState)
