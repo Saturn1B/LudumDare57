@@ -31,8 +31,8 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Time.timeScale > 0)
-        HandleMouseLook();
+        if(Time.timeScale > 0 && GameManager.isGameStarted)
+            HandleMouseLook();
     }
 
     private void HandleMouseLook()
