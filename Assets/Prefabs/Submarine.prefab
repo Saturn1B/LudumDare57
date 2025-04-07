@@ -7606,6 +7606,13 @@ MonoBehaviour:
   collisionNoise: {fileID: 5233015901135162509}
   warningNoise: {fileID: 9012976883807525386}
   explosionNoise: {fileID: 8287928614647110451}
+  damagedGlassMat:
+  - {fileID: 2100000, guid: cc21be8522a39e649bd08d80a9b022b5, type: 2}
+  - {fileID: 2100000, guid: 62c2d63549cda514e9ea59b359d2048e, type: 2}
+  - {fileID: 2100000, guid: 0de02c0cc34d8f6498edc70123145c89, type: 2}
+  - {fileID: 2100000, guid: b6ef538d1eab58048b9a026091611f9d, type: 2}
+  glass: {fileID: 878268753109269087}
+  cameraController: {fileID: 4626668515320781238}
 --- !u!136 &6598903759150942142
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8711,7 +8718,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 2.32, y: 0.34}
-  m_SizeDelta: {x: 0.95, y: 0.6}
+  m_SizeDelta: {x: 0.94, y: 0.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &4779126157534084025
 Canvas:
@@ -9060,6 +9067,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Submarine
       objectReference: {fileID: 0}
+    - target: {fileID: -8946053825596493725, guid: 5f2e8f4ea65c4df42a0eaceda5529d7f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 064effcfd30f20042b54c54236595eef, type: 2}
     - target: {fileID: -8936964365705235431, guid: 5f2e8f4ea65c4df42a0eaceda5529d7f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -9156,6 +9167,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_sousmarin
       objectReference: {fileID: 0}
+    - target: {fileID: 1263949266421087247, guid: 5f2e8f4ea65c4df42a0eaceda5529d7f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 26a37624745c99642a3ca5f8f18a03dd, type: 2}
     - target: {fileID: 1294047990650966843, guid: 5f2e8f4ea65c4df42a0eaceda5529d7f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -9204,6 +9219,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 8cc22a94ff54da84fbf33a82251db598, type: 2}
+    - target: {fileID: 6075272292013198228, guid: 5f2e8f4ea65c4df42a0eaceda5529d7f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 26a37624745c99642a3ca5f8f18a03dd, type: 2}
     - target: {fileID: 7453581897640025681, guid: 5f2e8f4ea65c4df42a0eaceda5529d7f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -9216,6 +9235,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Submarine
       objectReference: {fileID: 0}
+    - target: {fileID: 8301095105282021106, guid: 5f2e8f4ea65c4df42a0eaceda5529d7f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 26a37624745c99642a3ca5f8f18a03dd, type: 2}
+    - target: {fileID: 8355214262138702724, guid: 5f2e8f4ea65c4df42a0eaceda5529d7f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 26a37624745c99642a3ca5f8f18a03dd, type: 2}
     - target: {fileID: 8793237604558737335, guid: 5f2e8f4ea65c4df42a0eaceda5529d7f, type: 3}
       propertyPath: m_Layer
       value: 8
@@ -9224,6 +9251,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Submarine
       objectReference: {fileID: 0}
+    - target: {fileID: 9210118417860214450, guid: 5f2e8f4ea65c4df42a0eaceda5529d7f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 064effcfd30f20042b54c54236595eef, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9382,6 +9413,11 @@ MonoBehaviour:
 --- !u!23 &835407072454221482 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -4830944812581392756, guid: 5f2e8f4ea65c4df42a0eaceda5529d7f, type: 3}
+  m_PrefabInstance: {fileID: 3991032628301688870}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &878268753109269087 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 4274694228523436665, guid: 5f2e8f4ea65c4df42a0eaceda5529d7f, type: 3}
   m_PrefabInstance: {fileID: 3991032628301688870}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &918751983665030168 stripped
