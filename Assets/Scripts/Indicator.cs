@@ -62,7 +62,7 @@ public class Indicator : MonoBehaviour
 	{
 		Vector3 origin = subTransform.position;
 
-		Vector3 halfExtents = new Vector3(6, 6, 8) / 2;
+		Vector3 halfExtents = new Vector3(5, 5, 7) / 2;
 		Vector3 halfExtentsScaled = (new Vector3(6, 6, 8) * detectionScale) / 2;
 		//float maxDistance = 10;
 

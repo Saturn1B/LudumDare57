@@ -9,6 +9,7 @@ public class SubLife : MonoBehaviour
     [SerializeField] private Material matOn, matOff;
     [SerializeField] private float slowBlinkSpeed, fastBlinkSpeed;
 	[SerializeField] private Transform warningBlinker;
+	[SerializeField] private Transform warningBlinkerLight;
 	[SerializeField] private Material blinkerOn, blinkerOff;
 	[SerializeField] private LayerMask collisionLayer;
 	[SerializeField] private GameUI gameUI;
@@ -78,10 +79,12 @@ public class SubLife : MonoBehaviour
 		warningNoise.Stop();
 		warningNoise.Play();
 		warningBlinker.GetComponent<MeshRenderer>().material = blinkerOn;
+		warningBlinkerLight.gameObject.SetActive(true);
 
 		yield return new WaitForSeconds(blinkSpeed);
 
 		warningBlinker.GetComponent<MeshRenderer>().material = blinkerOff;
+		warningBlinkerLight.gameObject.SetActive(false);
 
 		yield return new WaitForSeconds(blinkSpeed);
 

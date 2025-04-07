@@ -1353,6 +1353,124 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1 &4213633515391225381
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 36621352152943935}
+  - component: {fileID: 784343910651156990}
+  - component: {fileID: 62879334090145274}
+  m_Layer: 0
+  m_Name: Point Light (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &36621352152943935
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4213633515391225381}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 2.7, z: 1.05}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 300833961242968626}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!108 &784343910651156990
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4213633515391225381}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 0
+  m_Shape: 0
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Intensity: 3
+  m_Range: 5
+  m_SpotAngle: 150
+  m_InnerSpotAngle: 140
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!114 &62879334090145274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4213633515391225381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1 &4466167683019091643
 GameObject:
   m_ObjectHideFlags: 0
@@ -7137,6 +7255,7 @@ Transform:
   - {fileID: 2012153569898162898}
   - {fileID: 159425765487339876}
   - {fileID: 4828001339614095882}
+  - {fileID: 36621352152943935}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7754283818686700495
@@ -7206,6 +7325,7 @@ MonoBehaviour:
   slowBlinkSpeed: 1
   fastBlinkSpeed: 0.3
   warningBlinker: {fileID: 188345185539754232}
+  warningBlinkerLight: {fileID: 36621352152943935}
   blinkerOn: {fileID: 2100000, guid: 8cc22a94ff54da84fbf33a82251db598, type: 2}
   blinkerOff: {fileID: 2100000, guid: 6f811e3d9c64c634594a0926253da5ff, type: 2}
   collisionLayer:
@@ -8923,6 +9043,8 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 512
+  useShipOrientation: 0
+  showDebug: 0
 --- !u!4 &188345185539754232 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3891072649415817438, guid: 5f2e8f4ea65c4df42a0eaceda5529d7f, type: 3}
@@ -8962,10 +9084,12 @@ MonoBehaviour:
   matOn: {fileID: 2100000, guid: 8cc22a94ff54da84fbf33a82251db598, type: 2}
   indicatorLight: {fileID: 5769830449991380599}
   baseBlinkSpeed: 1
-  detectionScale: 1
+  detectionScale: 2
   layerMask:
     serializedVersion: 2
     m_Bits: 1152
+  useShipOrientation: 0
+  showDebug: 1
 --- !u!23 &835407072454221482 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -4830944812581392756, guid: 5f2e8f4ea65c4df42a0eaceda5529d7f, type: 3}
@@ -9053,15 +9177,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   subTransform: {fileID: 300833961242968626}
   direction: {x: 1, y: 0, z: 0}
-  maxDistance: 50
+  maxDistance: 25
   matOff: {fileID: 2100000, guid: 6f811e3d9c64c634594a0926253da5ff, type: 2}
   matOn: {fileID: 2100000, guid: 8cc22a94ff54da84fbf33a82251db598, type: 2}
   indicatorLight: {fileID: 3730554712339198657}
   baseBlinkSpeed: 1
-  detectionScale: 1
+  detectionScale: 2
   layerMask:
     serializedVersion: 2
     m_Bits: 1152
+  useShipOrientation: 0
+  showDebug: 1
 --- !u!1 &1625830782884917770 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -6777104367151857108, guid: 5f2e8f4ea65c4df42a0eaceda5529d7f, type: 3}
@@ -9153,6 +9279,8 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 512
+  useShipOrientation: 0
+  showDebug: 0
 --- !u!1 &3091560470394603688 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2127267861979789454, guid: 5f2e8f4ea65c4df42a0eaceda5529d7f, type: 3}
@@ -9181,6 +9309,8 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 512
+  useShipOrientation: 0
+  showDebug: 0
 --- !u!4 &3524144201679181773 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5f2e8f4ea65c4df42a0eaceda5529d7f, type: 3}
@@ -9321,15 +9451,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   subTransform: {fileID: 300833961242968626}
   direction: {x: -1, y: 0, z: 1}
-  maxDistance: 50
+  maxDistance: 25
   matOff: {fileID: 2100000, guid: 6f811e3d9c64c634594a0926253da5ff, type: 2}
   matOn: {fileID: 2100000, guid: 8cc22a94ff54da84fbf33a82251db598, type: 2}
   indicatorLight: {fileID: 835407072454221482}
   baseBlinkSpeed: 1
-  detectionScale: 1
+  detectionScale: 2
   layerMask:
     serializedVersion: 2
     m_Bits: 1152
+  useShipOrientation: 1
+  showDebug: 1
 --- !u!4 &4564485512272182977 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8630391790386802969, guid: 5f2e8f4ea65c4df42a0eaceda5529d7f, type: 3}
@@ -9363,6 +9495,8 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 512
+  useShipOrientation: 1
+  showDebug: 0
 --- !u!1 &5576903317289631633 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8793237604558737335, guid: 5f2e8f4ea65c4df42a0eaceda5529d7f, type: 3}
@@ -9440,15 +9574,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   subTransform: {fileID: 300833961242968626}
   direction: {x: 0, y: 0, z: -1}
-  maxDistance: 50
+  maxDistance: 25
   matOff: {fileID: 2100000, guid: 6f811e3d9c64c634594a0926253da5ff, type: 2}
   matOn: {fileID: 2100000, guid: 8cc22a94ff54da84fbf33a82251db598, type: 2}
   indicatorLight: {fileID: 8690253664023888097}
   baseBlinkSpeed: 1
-  detectionScale: 1
+  detectionScale: 2
   layerMask:
     serializedVersion: 2
     m_Bits: 1152
+  useShipOrientation: 0
+  showDebug: 1
 --- !u!1 &6500079697320641968 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -1344866496288066154, guid: 5f2e8f4ea65c4df42a0eaceda5529d7f, type: 3}
@@ -9477,6 +9613,8 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 512
+  useShipOrientation: 1
+  showDebug: 0
 --- !u!1 &6549083595706986530 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7890864907373608964, guid: 5f2e8f4ea65c4df42a0eaceda5529d7f, type: 3}
@@ -9558,6 +9696,8 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 512
+  useShipOrientation: 0
+  showDebug: 0
 --- !u!4 &7237036078758988371 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -3238682968172529035, guid: 5f2e8f4ea65c4df42a0eaceda5529d7f, type: 3}
@@ -9592,15 +9732,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   subTransform: {fileID: 300833961242968626}
   direction: {x: 0, y: 0, z: 1}
-  maxDistance: 50
+  maxDistance: 25
   matOff: {fileID: 2100000, guid: 6f811e3d9c64c634594a0926253da5ff, type: 2}
   matOn: {fileID: 2100000, guid: 8cc22a94ff54da84fbf33a82251db598, type: 2}
   indicatorLight: {fileID: 1216594751834714441}
   baseBlinkSpeed: 1
-  detectionScale: 1
+  detectionScale: 2
   layerMask:
     serializedVersion: 2
     m_Bits: 1152
+  useShipOrientation: 0
+  showDebug: 1
 --- !u!1 &8304491171672585788 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4297131413938698726, guid: 5f2e8f4ea65c4df42a0eaceda5529d7f, type: 3}
@@ -9620,15 +9762,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   subTransform: {fileID: 300833961242968626}
   direction: {x: -1, y: 0, z: 0}
-  maxDistance: 50
+  maxDistance: 25
   matOff: {fileID: 2100000, guid: 6f811e3d9c64c634594a0926253da5ff, type: 2}
   matOn: {fileID: 2100000, guid: 8cc22a94ff54da84fbf33a82251db598, type: 2}
   indicatorLight: {fileID: 501992729952927703}
   baseBlinkSpeed: 1
-  detectionScale: 1
+  detectionScale: 2
   layerMask:
     serializedVersion: 2
     m_Bits: 1152
+  useShipOrientation: 0
+  showDebug: 1
 --- !u!23 &8690253664023888097 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -3460166744729702201, guid: 5f2e8f4ea65c4df42a0eaceda5529d7f, type: 3}
@@ -9663,15 +9807,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   subTransform: {fileID: 300833961242968626}
   direction: {x: 1, y: 0, z: 1}
-  maxDistance: 50
+  maxDistance: 25
   matOff: {fileID: 2100000, guid: 6f811e3d9c64c634594a0926253da5ff, type: 2}
   matOn: {fileID: 2100000, guid: 8cc22a94ff54da84fbf33a82251db598, type: 2}
   indicatorLight: {fileID: 4126026786833113559}
   baseBlinkSpeed: 1
-  detectionScale: 1
+  detectionScale: 2
   layerMask:
     serializedVersion: 2
     m_Bits: 1152
+  useShipOrientation: 1
+  showDebug: 1
 --- !u!23 &9136644986078779869 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 5307805741837330939, guid: 5f2e8f4ea65c4df42a0eaceda5529d7f, type: 3}
