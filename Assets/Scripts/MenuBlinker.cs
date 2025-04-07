@@ -6,7 +6,8 @@ public class MenuBlinker : MonoBehaviour
 {
 	[SerializeField] private MeshRenderer indicatorLight;
 	[SerializeField] private Material matOn, matOff;
-	[SerializeField] private GameObject light;
+	[SerializeField] private GameObject lightSource;
+	[SerializeField] private AudioSource audioSource;
 	[SerializeField] private float blinkSpeed;
 
     void Start()
@@ -17,12 +18,13 @@ public class MenuBlinker : MonoBehaviour
 	private IEnumerator Blink()
 	{
 		indicatorLight.material = matOn;
-		if (light != null) light.SetActive(true);
+		if (lightSource != null) lightSource.SetActive(true);
+		if (audioSource != null) audioSource.Play();
 
 		yield return new WaitForSeconds(blinkSpeed);
 
 		indicatorLight.material = matOff;
-		if (light != null) light.SetActive(false);
+		if (lightSource != null) lightSource.SetActive(false);
 
 		yield return new WaitForSeconds(blinkSpeed);
 

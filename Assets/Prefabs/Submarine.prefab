@@ -7594,7 +7594,7 @@ MonoBehaviour:
   matOn: {fileID: 2100000, guid: 8cc22a94ff54da84fbf33a82251db598, type: 2}
   matOff: {fileID: 2100000, guid: 6f811e3d9c64c634594a0926253da5ff, type: 2}
   slowBlinkSpeed: 1
-  fastBlinkSpeed: 0.3
+  fastBlinkSpeed: 0.35
   warningBlinker: {fileID: 188345185539754232}
   warningBlinkerLight: {fileID: 36621352152943935}
   blinkerOn: {fileID: 2100000, guid: 8cc22a94ff54da84fbf33a82251db598, type: 2}
